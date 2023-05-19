@@ -18,7 +18,8 @@ st.write("Loaded fruit list:", my_fruit_list)
 fruits_options = list(my_fruit_list.index)
 st.write("Options:", fruits_options)
 
-fruits_selected = st.multiselect("Pick some fruits:", fruits_options, ['Avocado', 'Strawberries'])
+default_fruits = ['Avocado', 'Strawberries']
+fruits_selected = st.multiselect("Pick some fruits:", fruits_options, default=default_fruits)
 st.write("Selected fruits:", fruits_selected)
 
 fruits_to_show = my_fruit_list.loc[fruits_selected]
